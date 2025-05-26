@@ -111,8 +111,41 @@
 
 ❗ยกเว้น pin ที่กำลังใช้งานกับอุปกรณ์อื่นอยู่ เช่น TX/RX, I2C
 
+## การรับข้อมูล Bluetooth และแสดงผลบน PC ด้วยโปรแกรม PuTTY
+* เปิด Device Manager เช็ค Ports ที่ PC มีอยู่แล้ว ก่อนทำการเชื่อมต่อกับ HC-05
+  
+![image](https://github.com/user-attachments/assets/6c70c2ab-6c12-4d6b-b55c-4d5067b8f774)
+
+* เชื่อมต่อ HC-05 กับ PC
+  
+❗ไฟแสดงสถานะบน HC-05 จะกะพริบถี่ หมายถึงพร้อมสำหรับการเชื่อมต่อ ถ้ากะพริบช้าแสดงว่ามีการเชื่อมต่อเดิมอยู่
+  
+  ![image](https://github.com/user-attachments/assets/9d1ef2a3-77e1-45c0-aee0-9a61f988db2e)
+
+* เปิด Device Manager เช็ค Ports ที่เพิ่มขึ้นมา ถ้าไม่ขึ้นแสดงว่าทำการเชื่อมต่อไม่สำเร็จ
+
+  ![image](https://github.com/user-attachments/assets/879060b6-675e-4879-8b17-6cd8c23726c2)
+
+  
+* เปิดโปรแกรม PuTTY จากนั้นเลือก Connection type เป็น Serial เลือก Speed ตามที่ได้โปรแกรมไว้ และเลือก COM ที่เพิ่มขึ้นมา
+  
+  ![image](https://github.com/user-attachments/assets/a5623483-d112-45ba-b01a-2c8104c9c307)
+
+* การแสดงผลบน PuTTY จะต้องเลือก Output ที่สอดคล้องกับ pin ที่ต่ออยู่
+
+| STM32F108C8T6 | ประเภทการเชื่อมต่อ | Output ด้วย Micro-USB | Output ด้วย HC-05 |
+|---|---|---|---|
+| PA9 | Serial1 TX | "Serial.print" | "Serial1.print" |
+| PA10 | Serial1 RX | "Serial.print" | "Serial1.print" |
 
 
+
+
+
+
+
+
+  
 
 
 
